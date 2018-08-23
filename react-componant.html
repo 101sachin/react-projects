@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React tutorial</title>
+
+
+      <script src="https://fb.me/react-0.14.7.js"></script>
+    <script src="https://fb.me/react-dom-0.14.7.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.2/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="root"></div>
+    <script type='text/babel'>
+    
+     // funtionbase componant and classbase componant 
+
+      function TopHeading(props){
+       
+       return <p> it is a budget Top heading {props.date.toLocalTimeString();}</p>
+
+      }
+
+
+      class BudgetView extends React.Componant{
+      // implement the react  render function 
+      render(){
+         return <p> it is a budget view </p>  
+  	  }
+
+  	 } 
+
+     
+        const topHeading =<ToppHeading text="Welcome to react custom/user-defined componat"/>
+       
+      	ReactDOM.render(topHeadin,document.getElementById('app'));
+
+
+// function componant 
+/*function Heading(props){
+return <h1> it is a sample top heading : {props.text} </h1>
+}*/
+
+
+// class componant
+
+class Budget extends React.Component{
+
+// defing the state and lifecycle 
+/*constructor(props){
+	super(props);
+  this.state = {date: new Date()}; 
+}*/
+
+ constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+
+
+// implement the render method 
+render(){
+
+//console.log(this.props);
+return (<div>
+        <h3> it is {this.props.name}  represented By  hgjgj
+        {this.props.party} is               </h3>
+      </div>
+		);
+}
+}
+
+
+/*class Hello extends React.Component {
+  render() {
+    return <div>Hello {this.props.name} represented By {this.props.party}</div>;*/
+  }
+}
+
+/*ReactDOM.render(
+  <Hello name="World" />,
+  document.getElementById('root')
+);*/
+
+//ReactDOM.render(<Heading text='top main heading' />,document.getElementById('root'));
+
+const budget=<Budget name="Rail Budget -2018-19" party="BJP" />
+ReactDOM.render(budget,document.getElementById('root'));
+
+
+
+
+      	
+
+
+
+
+    </script>
+  </body>
+</html>

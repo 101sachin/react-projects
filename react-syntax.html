@@ -1,0 +1,59 @@
+// creating element 
+ 1. //React.createElement('nameof tag', 'propery',innertext);  to create element 
+ 2. ReactDom.render(reactEle,DOMNODE); // to renedr the react elemet 
+
+
+JSX ==> javascript syntax extension  ==> using as DOM template 
+
+const = html tags 
+// TEmplating 
+const data={
+	haeding :'',
+	description:'tsets description running',
+	uiclass:'cls-desc'
+}
+
+const topHead =  (<div>
+                 <h1 className={data.uiclass}>Good MOrning India{ new Data().toLoacalTimeString();}</h1>
+                  <p>{data.description}</p>
+				 </div>);
+
+
+//it may call tha React.createElement("h1",
+				 										)
+var ele=React.createElement("h1",
+{className:data.uiclass},
+data.desc
+);
+
+ele= {
+	type :'h1',
+	props:{
+		className:data.uiclass
+		children:data.desc
+          
+	}
+
+};	
+				 										)
+
+
+// react componant == (javascript function return the specific UI Part // ui independent part )
+
+
+###functional and class componant => takes input called props and return react ele 
+
+function topHead(props){
+    return <h1>hello{props.firstName}</h1>
+}
+
+
+
+class TopHead extends React.Componant{
+	
+
+  render(){
+         return <h1>hello{this.props.firstName}</h1>
+  }
+
+}

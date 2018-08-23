@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React tutorial</title>
+
+
+      <script src="https://fb.me/react-0.14.7.js"></script>
+    <script src="https://fb.me/react-dom-0.14.7.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.2/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type='text/babel'>
+    // function componant
+      //  var  TopButton=function(){
+      //          function clickHandler(e){
+      //               alert('click event trigger by sachin');
+      //              }
+      //
+      //    return <button onClick={clickHandler}>click On ME</button>
+      //  }  
+
+
+  /* class LoginButton extends React.Component{
+      
+      // implement the constructor fucntion toset the state of the component 
+
+
+      // event handler 
+      btnClickHandler(){
+         alert('login button clicked');
+      }
+
+      // implement the render method to return the virtual DOM 
+      render(){
+         return(<button onClick={this.btnClickHandler}>LoginBUtton </button>)
+      }
+
+   }  
+
+  const loginButton=<LoginButton label="Click to Login" />
+ ReactDOM.render(loginButton,document.getElementById('root'));
+*/
+
+
+
+
+
+
+class Toggle extends React.Component {
+
+   constructor(props){
+      super(props);
+      this.state={isToggleOn:true};
+       //this.handleClick = this.handleClick.bind(this);
+    }
+
+
+handleClick() {
+    alert(this);
+
+  this.setState(function(prevState,prpos){
+          return {isToggleOn:!prevState.isToggleOn}    
+    });
+        alert('login button clicked');
+  }
+
+  render() {
+  console.log(this);
+    return (
+      <button onClick={this.handleClick.bind(this)}> 
+        {this.state.isToggleOn==true?"ON":"OFF"}
+      </button>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Toggle />,
+  document.getElementById('root')
+);
+
+
+
+
+
+
+
+   // user-defined componant
+   // const topbutton=<TopButton/>
+   //  ReactDOM.render(loginButton,document.getElementById('root'));
+
+    function tick() {
+      const element = (
+        <div>
+          <h1>Hello, world!</h1>
+          <h2>It is {new Date().toLocaleTimeString()}.</h2>
+        </div>
+      );
+      ReactDOM.render(top, document.getElementById('root'));
+    }
+
+    //setInterval(tick, 1000);
+
+
+
+    </script>
+  </body>
+</html>
