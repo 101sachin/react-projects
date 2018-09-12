@@ -12,29 +12,31 @@
   <body>
     <div id="app"></div>
     <div id="root"></div>
+
+
+
+
     <script type='text/babel'>
     
      // funtionbase componant and classbase componant 
 
-      function TopHeading(props){
+     /* function TopHeading(props){
        
        return <p> it is a budget Top heading {props.date.toLocalTimeString();}</p>
 
       }
-
-
       class BudgetView extends React.Componant{
       // implement the react  render function 
       render(){
-         return <p> it is a budget view </p>  
+         return <p> it is a budget view </p>;  
   	  }
 
-  	 } 
+    } 
 
      
-        const topHeading =<ToppHeading text="Welcome to react custom/user-defined componat"/>
+        //const topHeading =<ToppHeading text="Welcome to react custom/user-defined componat"/>
        
-      	ReactDOM.render(topHeadin,document.getElementById('app'));
+      	//ReactDOM.render(topHeadin,document.getElementById('app'));
 
 
 // function componant 
@@ -48,35 +50,29 @@ return <h1> it is a sample top heading : {props.text} </h1>
 class Budget extends React.Component{
 
 // defing the state and lifecycle 
-/*constructor(props){
-	super(props);
-  this.state = {date: new Date()}; 
-}*/
-
  constructor(props) {
     super(props);
     this.state = {date: new Date()};
   }
 
-
 // implement the render method 
 render(){
-
 //console.log(this.props);
 return (<div>
         <h3> it is {this.props.name}  represented By  hgjgj
-        {this.props.party} is               </h3>
+        {this.props.party} is</h3>
       </div>
 		);
 }
+
 }
 
 
 /*class Hello extends React.Component {
   render() {
-    return <div>Hello {this.props.name} represented By {this.props.party}</div>;*/
+    return <div>Hello {this.props.name} represented By {this.props.party}</div>;
   }
-}
+}*/
 
 /*ReactDOM.render(
   <Hello name="World" />,
@@ -85,16 +81,8 @@ return (<div>
 
 //ReactDOM.render(<Heading text='top main heading' />,document.getElementById('root'));
 
-const budget=<Budget name="Rail Budget -2018-19" party="BJP" />
+const budget = <Budget name="Rail Budget -2018-19" party="BJP" />
 ReactDOM.render(budget,document.getElementById('root'));
-
-
-
-
-      	
-
-
-
 
     </script>
   </body>
