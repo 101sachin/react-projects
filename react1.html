@@ -35,6 +35,20 @@
           return <h1>first functinal component</h1>;
       }
 
+
+function MyComponent(){
+
+    return(
+      <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 className="display-4">Pricing</h1>
+        <p className="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+      </div>
+    );
+  }
+
+
+const ele12  =   <MyComponent />
+
       const firstComponent=<FirstComponent  />
       ReactDOM.render(firstComponent,document.getElementById('app'));
       
@@ -44,7 +58,7 @@
         );
       }
       const secondComponent=<SecondComponent name="sachin" age="34" />
-      ReactDOM.render(secondComponent,document.getElementById('app'));
+      ReactDOM.render(ele12,document.getElementById('app'));
 
     </script>
   </body>
