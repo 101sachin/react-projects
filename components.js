@@ -50,7 +50,7 @@ function Card(props) {
   );
 }
 
-function CardWrapper() {
+function CardWrappe(){
   return (
     <div className="card-deck mb-3 text-center">
       <Card label='Free' price='0' />
